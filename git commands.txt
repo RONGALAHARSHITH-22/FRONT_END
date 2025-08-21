@@ -1,0 +1,23 @@
+c216 sir cabin
+-------------------------------------------------------------
+git checkout subbranch:
+
+->for entering into the subbranch
+-------------------------------------------------------------
+for checking out of subbranch and entering into main branch:
+
+->git add .
+->git commit -m origin
+->git push -u origin
+->git checkout main
+-------------------------------------------------------------
+To Merge changes from main into your sub-branch:
+
+->git merge main
+->git add .
+->git commit -m "Merged main into subbranch"
+->git push origin subbranch
+-------------------------------------------------------------
+cd myreactapp
+  npm install
+  npm run dev

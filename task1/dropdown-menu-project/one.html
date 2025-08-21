@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px;
+        }
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Date and Time Demo</h1>
+    <p>
+        <button onclick="showdate()">Show Date</button>
+        <span id="date"></span>
+    </p>
+    <p>
+        Current Time: <span id="time"></span>
+    </p>
+
+    <script>
+        function showdate() {
+            let nowdate = new Date();
+            document.getElementById("date").innerHTML = nowdate.toDateString();
+        }
+
+        function showtime() {
+            let nowtime = new Date();
+            document.getElementById("time").innerHTML = nowtime.toLocaleTimeString();
+        }
+
+        setInterval(showtime, 1000); // Call the correct function
+    </script>
+</body>
+</html>

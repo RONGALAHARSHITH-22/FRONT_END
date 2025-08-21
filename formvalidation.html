@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+       <form id="regform">
+    Name: <input type="text" id="name"><br><br>
+    <span id="nameerror" style="color: red;"></span><br>
+    Education: <input type="text" id="education"><br><br>
+    <span id="educationerror" style="color: red;"></span><br>
+    <button id="submit" type="submit">Submit</button>
+</form>
+        <div>
+            you entered name is <span id="spanname"></span> and education is <span id="spaneducation"></span>
+        </div>
+       <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const myform = document.getElementById('regform');
+
+        myform.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const name = document.getElementById('name').value.trim();
+            const education = document.getElementById('education').value.trim();
+
+            let valid = true;
+
+            if (name === "") {
+                document.getElementById('nameerror').innerText = "Name cannot be empty";
+                valid = false;
+            } else {
+                document.getElementById('nameerror').innerText = "";
+            }
+
+            if (education === "") {
+                document.getElementById('educationerror').innerText = "Education cannot be empty";
+                valid = false;
+            } else {
+                document.getElementById('educationerror').innerText = "";
+            }
+
+            if (valid) {
+                document.getElementById('spanname').innerText = name;
+                document.getElementById('spaneducation').innerText = education;
+            }
+        });
+    });
+</script>
+    </body>
+</html>

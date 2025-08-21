@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    td, th {
+      padding: 8px;
+      vertical-align: top;
+    }
+    .section-title {
+      background-color: #30de19;
+      font-weight: bold;
+    }
+    .bordered {
+      border: 1px solid #000;
+    }
+    .center {
+      text-align: center;
+    }
+    input[type="text"], input[type="email"], input[type="date"], input[type="number"] {
+      width: 100%;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+    .profile-pic-box {
+      width: 150px;
+      height: 150px;
+      border: 1px dashed #000;
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="center"><br>
+  <u>Student Profile</u></h2>
+  <p><strong>Basic Information Form</strong></p>
+  <!-- Section A -->
+  <table class="bordered">
+    <tr><td colspan="5" class="section-title">A. Personal Information:</td></tr>
+    <tr>
+      <td>Name</td>
+      <td><input type="text"></td>
+      <td rowspan="3" colspan="1" class="profile-pic-box"><img src="" style="height: 350px; width: 320px;"></td>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>Father Name</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Phone Number</td>
+      <td><input type="text" placeholder="xxxxx-xxxxxxx-x"></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td>Date of Birth</td>
+      <td><input type="date"></td>
+    </tr>
+  </table>
+  <!-- Section B -->
+  <table class="bordered">
+    <tr><td colspan="4" class="section-title">B. Academic Information (Current):</td></tr>
+    <tr>
+      <td>University Name</td>
+      <td><input type="text"></td>
+      <td>Date of Admission</td>
+      <td><input type="date"></td>
+    </tr>
+    <tr>
+      <td>Degree Program</td>
+      <td><input type="text"></td>
+      <td>Total Semesters</td>
+      <td><input type="number"></td>
+    </tr>
+    <tr>
+      <td>Current Semester</td>
+      <td><input type="number"></td>
+    </tr>
+  </table>
+  <!-- Section C -->
+  <table class="bordered">
+    <tr><td colspan="4" class="section-title">C. Contact Information:</td></tr>
+    <tr>
+      <td>Email ID</td>
+      <td><input type="email"></td>
+      <td>Religion</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><input type="text"></td>
+      <td>Cell</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Mother Tongue</td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        Preferred means of contact:
+        <label><input type="checkbox"> Phone</label>
+        <label><input type="checkbox"> Cell Phone</label>
+        <label><input type="checkbox"> Email</label>
+      </td>
+    </tr>
+  </table>
+  <!-- Section D -->
+  <table class="bordered">
+    <tr><td colspan="5" class="section-title">D. Location / Address Information:</td></tr>
+    <tr>
+      <td></td>
+      <td><strong>District/Agency</strong></td>
+      <td><strong>Town/City</strong></td>
+    </tr>
+    <tr>
+      <td>Permanent</td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Present</td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="1">Domicile District/Agency Name</td>
+      <td colspan="2"><input type="text"></td>
+    </tr>
+    <tr>
+      <td>Recorded on (Date)</td>
+      <td><input type="date"></td>
+      <td colspan="4">Signature of Student</td>
+    </tr>
+  </table>
+</body>
+</html>
